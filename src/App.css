@@ -172,3 +172,17 @@ body, .app {
   text-align: center;
   font-size: 0.8em;
 }
+
+/* loading.... */
+.loading {
+  text-align: center;
+  margin: 0 auto;
+  padding: .75rem 1.25rem;
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1050;
+}
