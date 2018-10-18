@@ -18,6 +18,11 @@ class SearchPage extends Component {
         });
         BooksAPI.search(query.trim()).then((results) => {
             if (Array.isArray(results)) {
+                results.forEach((book) => {
+                   const bookInShelf = this.props.books.find((_book) => ( _book.id === book.id ));
+                   book.shelf = bookInShelf ? bookInShelf.shelf : 'none';
+                });
+
                 this.setState({
                     results,
                     searching: false

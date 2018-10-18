@@ -58,6 +58,7 @@ class BooksApp extends React.Component {
                 if (bookInState) {
                     bookInState.shelf = shelf;
                 } else {
+                    book.shelf = shelf
                     books = books.concat([book])
                 }
 
